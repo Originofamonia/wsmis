@@ -5,6 +5,7 @@ from concurrent import futures
 from retrying import retry
 import google.auth
 from google.auth.transport.requests import AuthorizedSession
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/qiyuan/.kaggle/kaggle.json"
 
 # URL of CHC API
 CHC_API_URL = 'https://healthcare.googleapis.com/v1beta1'

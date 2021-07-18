@@ -7,7 +7,7 @@ import imageio
 import pydicom
 # import cv2
 import torch.nn.functional as F
-from misc import imutils
+from irn.misc import imutils
 
 IMG_FOLDER_NAME = "JPEGImages"
 ANNOT_FOLDER_NAME = "Annotations"

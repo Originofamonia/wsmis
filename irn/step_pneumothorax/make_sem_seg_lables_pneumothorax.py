@@ -9,8 +9,8 @@ import importlib
 import os
 import tqdm
 
-import voc12.dataloader
-from misc import torchutils, indexing
+import irn.voc12.dataloader
+from irn.misc import torchutils, indexing
 from model_training.common.augmentations import get_transforms
 
 cudnn.enabled = True
@@ -32,8 +32,8 @@ def run(args):
     }
     transform = get_transforms(transform_config)
 
-    dataset = voc12.dataloader.PneumothoraxMSDataset('/datasets/LID/Pneumothorax/train/val.csv',
-                                                     transform=transform, scales=(1.0, 0.75, 0.5, 0.25))
+    dataset = irn.voc12.dataloader.PneumothoraxMSDataset('/datasets/LID/Pneumothorax/train/val.csv',
+                                                         transform=transform, scales=(1.0, 0.75, 0.5, 0.25))
 
     data_loader = DataLoader(dataset,
                              shuffle=False, num_workers=args.num_workers // n_gpus, pin_memory=False)

@@ -2,7 +2,7 @@ import sys
 import os
 
 sys.path.append("lid_segmentation")
-import step.make_sem_seg_lables_pneumothorax as make_sem_seg_lables_pneumothorax
+import step_pneumothorax.make_sem_seg_lables_pneumothorax as make_sem_seg_labels_pneumothorax
 
 
 class args:
@@ -17,4 +17,4 @@ class args:
     sem_seg_out_dir = "/datasets/LID/Pneumothorax/train/out_masks/sem_seg"
 
 
-make_sem_seg_lables_pneumothorax.run(args)
+make_sem_seg_labels_pneumothorax.run(args)
